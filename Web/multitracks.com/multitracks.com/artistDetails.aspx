@@ -82,8 +82,8 @@
 											<div class="song-list--item--right">
 
 												<a href="#" class="song-list--item--primary"><asp:Literal ID="SongTitle1" runat="server" /> </a>
-												<a class="song-list--item--secondary">Album name</a>
-												<a class="song-list--item--secondary">145 BPM</a>
+												<a class="song-list--item--secondary"><asp:Literal ID="Albumtitle1" runat="server" /></a>
+												<a class="song-list--item--secondary"><asp:Literal ID="BPM" runat="server" /></a>
 												<a class="song-list--item--secondary">4/4</a>
 												<div class="song-list--item--icon--holder">
 													<a href="#" class="song-list--item--icon--wrap" style="display: inline-block">
@@ -118,8 +118,8 @@
 											<div class="song-list--item--right">
 
 												<a href="#" class="song-list--item--primary"><asp:Literal ID="SongTitle2" runat="server" /></a>
-												<a class="song-list--item--secondary">Album name</a>
-												<a class="song-list--item--secondary">145 BPM</a>
+												<a class="song-list--item--secondary"><asp:Literal ID="albumtitle2" runat="server" /></a>
+												<a class="song-list--item--secondary"><asp:Literal ID="BPM2" runat="server" /></a>
 												<a class="song-list--item--secondary">4/4</a>
 												<div class="song-list--item--icon--holder">
 													<a href="#" class="song-list--item--icon--wrap" style="display: inline-block">
@@ -154,8 +154,8 @@
 											<div class="song-list--item--right">
 
 												<a href="#" class="song-list--item--primary"><asp:Literal ID="SongTitle3" runat="server" /></a>
-												<a class="song-list--item--secondary">Album name</a>
-												<a class="song-list--item--secondary">145 BPM</a>
+												<a class="song-list--item--secondary"><asp:Literal ID="albumtitle3" runat="server" /></a>
+												<a class="song-list--item--secondary"><asp:Literal ID="BPM3" runat="server" /></a>
 												<a class="song-list--item--secondary">4/4</a>
 												<div class="song-list--item--icon--holder">
 													<a href="#" class="song-list--item--icon--wrap" style="display: inline-block">

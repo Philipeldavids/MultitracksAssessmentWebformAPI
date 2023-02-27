@@ -13,37 +13,44 @@ public partial class artistDetails : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        var connectionString = WebConfigurationManager.ConnectionStrings["admin"].ConnectionString;
 
-        using (SqlConnection sqlConnectionm = new SqlConnection(connectionString))
+        var sql = new SQL();
+
+        try
         {
-            sqlConnectionm.Open();
-            //testConnectiontext.Text = "Connection Open Successfully";
-            SqlDataAdapter da = new SqlDataAdapter("spGetArtistDetails", sqlConnectionm);
-            da.SelectCommand.CommandType = CommandType.StoredProcedure;
-            DataTable dt = new DataTable();
-            da.Fill(dt);
-            sqlConnectionm.Close();
-                       
+            //sql.Parameters.Add("@stepID", 1);
+            var data = sql.ExecuteStoredProcedureDT("spGetArtistDetails1");
 
-            for (int i = 0; i <= dt.Rows.Count - 1; i++)
+            for(int i = 0; i <= data.Rows.Count -1; i++)
             {
-                DataRow dr = dt.Rows[i];
+                DataRow dr = data.Rows[i];
 
-                biography.Text = dr[3].ToString();
-                Image1.ImageUrl = dr[5].ToString();
-                Image2.ImageUrl = dr[4].ToString();
-                Image3.ImageUrl = dr[4].ToString();
-                SongTitle1.Text = dr[2].ToString();
-                SongTitle2.Text = dr[2].ToString();
-                SongTitle3.Text = dr[2].ToString();
-                Image4.ImageUrl = dr[4].ToString();
-                Image5.ImageUrl = dr[4].ToString();
-                Image6.ImageUrl = dr[4].ToString();
-                SongTitle4.Text = dr[2].ToString();
-                SongTitle5.Text = dr[2].ToString();
-                SongTitle6.Text = dr[2].ToString();
+                Image1.ImageUrl = dr[3].ToString();
+                Image2.ImageUrl = dr[2].ToString();
+                Image3.ImageUrl = dr[9].ToString();
+                SongTitle1.Text = dr[5].ToString();
+                Albumtitle1.Text = dr[8].ToString();
+                BPM.Text = dr[6].ToString();
+                albumtitle2.Text = dr[8].ToString();
+                BPM2.Text = dr[6].ToString();
+                albumtitle3.Text = dr[8].ToString();
+                BPM3.Text = dr[6].ToString();
+                Image4.ImageUrl = dr[9].ToString();
+                Image5.ImageUrl = dr[9].ToString();
+                Image6.ImageUrl = dr[9].ToString();
+                SongTitle4.Text = dr[5].ToString();
+                SongTitle5.Text = dr[5].ToString();
+                SongTitle6.Text = dr[5].ToString();
+                biography.Text = dr[1].ToString();
+            
+
             }
+           
         }
+        catch
+        {
+           
+        }
+        
     }
 }
