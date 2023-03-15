@@ -3,4 +3,5 @@ Core/MTDataAccess/obj/
 DB/bin/
 DB/obj/
 Web/multitracks.com/multitracks.com/Bin/
-packages/
+DB/MultitracksDB.jfm
+*.jfm
